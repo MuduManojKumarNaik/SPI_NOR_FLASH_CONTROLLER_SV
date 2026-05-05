@@ -47,6 +47,60 @@ The verification environment consists of:
 
 ---
 
+# Block Diagram
+
+The following block diagram illustrates the architecture of the SPI NOR Flash Controller along with the SystemVerilog-based verification environment.
+
+It shows:
+- SPI NOR Flash Controller internal architecture
+- Host/System interface
+- SPI communication signals
+- Flash memory model
+- Verification components such as generator, driver, monitor, scoreboard, assertions, and coverage collector
+
+## SPI NOR Flash Controller Architecture
+
+![SPI NOR Flash Controller Block Diagram](SPI%20NOR%20FLASH%20CONTROLLER%20-%20BLOCK%20DIAGRAM.png)
+
+---
+
+## Block Diagram Description
+
+### DUT (SPI NOR Flash Controller)
+
+The DUT consists of:
+- Command Decoder
+- Address Manager
+- SPI Engine
+- Control Logic & FSM
+- Data Buffer
+- Status Register
+- Clock Generator
+- SPI Interface
+
+The controller communicates with the SPI NOR Flash memory using:
+- SCLK
+- MOSI
+- MISO
+- CS_N
+
+---
+
+### Verification Environment
+
+The SystemVerilog verification environment includes:
+- Generator
+- Driver
+- SPI Interface
+- Monitor
+- Scoreboard
+- Assertions
+- Functional Coverage
+
+The verification architecture validates protocol behavior, data integrity, error handling, and corner-case scenarios using constrained-random verification and assertion-based checking.
+
+---
+
 # Functional Coverage Result
 
 | Metric | Result |
